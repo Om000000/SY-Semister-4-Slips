@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+function loadDoc()
+{
+var xhr = new XMLHttpRequest();
+xhr.onreadystatechange= function()
+{
+if(this.readystate==4 && this.status==200)
+{
+document.getElementById("input").innerHTML=this.responseText;
+
+
+}
+};
+xhttp.open("GET","slip 6.php",true);
+xhttp.send();
+
+}
+</script>
+<body>
+    <label>Enter your username</label>
+<input type="text" name="username" placeholder="USERNAME"><br>
+    <label>Enter your password</label>
+<input type="text" name="password" placeholder="PASSWORD"><br>
+<?php
+$con=mysqli_connect('localhost','root','','slips');
+if(!$con)
+    {
+        die("Error connecting to database");
+    }
+    else
+        {
+$username=$_GET['username'];
+$password=$_GET['password'];
+$query="insert into users(username,password) values('$username','$password')";
+if(mysqli_query($query))
+    {
+echo"Login successfull";
+
+    }
+else
+    {
+        echo"username is already taken "
+    }
+
+
+
+        }
+$pasforma='';
+
+
+
+
+
+
+
+
+
+
+?>
+
+</body>
+</html>
