@@ -1,0 +1,33 @@
+Slip20.html
+<html>
+<head>
+<script>
+function showdetails(player_name)
+{
+var xhr=new XMLHttpRequest();
+
+xhr.onreadystatechange = function()
+{
+if(this.status==200 && this.readyState==4)
+{
+
+document.getElementById('suggestion').innerHTML=this.responseText;
+}
+}
+xhr.open("GET","Slip20.php?q="+encodeURIComponent(player_name),true);
+xhr.send();
+
+}
+</script>
+</head>
+<body>
+<input type="radio" value="Virat Kohli" name="player_name" id="player_name1"
+onclick="showdetails(this.value)">
+<input type="radio" value="Rohit Sharma" name="player_name" id="player_name2" onclick="showdetails(this.value)">
+
+<input type="radio" value="Jasprit Bumrah" name="player_name" id="player_name3" onclick="showdetails(this.value)">
+
+<span id="suggestion"> </span>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+
+<players>
+<player>
+<name>Rohit Sharma</name>
+<country>India</country>
+<wicket>33</wicket>
+<runs>15000</runs>
+</player>
+
+<player>
+<name>Virat Kohli</name>
+<country>India</country>
+<wicket>33</wicket>
+<runs>15000</runs>
+</player>
+
+<player>
+<name>Jasprit Bumrah</name>
+<country>India</country>
+<wicket>100</wicket>
+<runs>1500</runs>
+</player>
+</players>
